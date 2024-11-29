@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your appointment at our luxurious spa or salon.">
+    <title>Book Your Appointment | Vimal's Spa & Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #2a3d57;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #2a3d57;
+        }
+        .form-container label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            background-color: #2a3d57;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-container button:hover {
+            background-color: #375062;
+        }
+        .form-container input[type="radio"] {
+            width: auto;
+        }
+        footer {
+            background-color: #2a3d57;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vimal's Spa & Salon</h1>
+    <p>Book Your Appointment Today</p>
+</header>
+
+<div class="form-container">
+    <h2>Booking Form</h2>
+    <form action="submit_booking.php" method="POST">
+
+        <!-- Personal Information -->
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full_name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Service Selection -->
+        <label for="service">Choose Your Service:</label>
+        <select id="service" name="service" required>
+            <option value="">-- Select a Service --</option>
+            <option value="massage">Massage Therapy</option>
+            <option value="facial">Facial Treatment</option>
+            <option value="manicure">Manicure & Pedicure</option>
+            <option value="haircut">Haircut & Styling</option>
+            <option value="waxing">Waxing</option>
+        </select>
+
+        <!-- Date and Time Selection -->
+        <label for="appointment-date">Preferred Appointment Date:</label>
+        <input type="date" id="appointment-date" name="appointment_date" required>
+
+        <label for="appointment-time">Preferred Appointment Time:</label>
+        <input type="time" id="appointment-time" name="appointment_time" required>
+
+        <!-- Special Requests or Notes -->
+        <label for="special-request">Special Requests / Notes:</label>
+        <textarea id="special-request" name="special_request" rows="4"></textarea>
+
+        <!-- Payment Information (Optional) -->
+        <label>Preferred Payment Method:</label>
+        <label for="card"> Card</label>
+        <input type="radio" id="card" name="payment_method" value="credit_card">
+        <label for="cash">Cash</label>
+        <input type="radio" id="cash" name="payment_method" value="cash">
+
+        <!-- Submit Button -->
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Vimal's Spa & Salon | All Rights Reserved</p>
+    <p>Follow us on: <a href="#" style="color: white;">Instagram</a> 
+</footer>
+
+</body>
+</html>
